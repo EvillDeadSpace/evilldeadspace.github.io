@@ -10,16 +10,83 @@
     <link rel="stylesheet" href="button.css">
     <link rel="stylesheet" href="button2.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Montserrat:wght@100&family=Open+Sans:wght@300&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
+    <script type="text/javascript">
+        $(function() {
 
+            $('#login-show').click(function() {
+                $('#login-modal').fadeIn().css("display", "flex");
+            });
+
+            $('.close-modal').click(function() {
+                $('#login-modal').fadeOut();
+            });
+        });
+        $(function() {
+
+            $('#login-show2').click(function() {
+                $('#login-modal2').fadeIn().css("display", "flex");
+            });
+
+            $('.close-modal2').click(function() {
+                $('#login-modal2').fadeOut();
+            });
+        });
+    </script>
     <div class="frame">
         <h1>Welcome</h1>
-        <button class="custom-btn btn-6"><span>Log In</span></button>
-        <button class="custom-btn btn-6"><span>Create account</span></button>
+        <button id="login-show" class="custom-btn btn-6"><span>LogIn</span></button>
+        <div id="login-modal">
+            <div class="modal">
+                <div class="top-form">
+                    <div class="close-modal">
+                        &#10006;
+                    </div>
+                </div>
+                <div class="login-form">
+                    <h2>Login</h2>
+                    <form action="#">
+                        <input class="form-control" type="text" placeholder="Email">
+                        <input class="form-control" type="password" placeholder="Password">
+                        <button type="button" class="custom-btn btn-6">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <button id="login-show2" class="custom-btn btn-6"><span>Create account</span></button>
+        <div id="login-modal2">
+            <div class="modal2">
+                <div class="top-form2">
+                    <div class="close-modal2">
+                        &#10006;
+                    </div>
+                </div>
+                <div class="login-form">
+                    <h2>Create acccount</h2>
+                    <form action="#">
+                        <input class="form-control" type="text" placeholder="Username">
+                        <input class="form-control" type="text" placeholder="Email">
+                        <input class="form-control" type="password" placeholder="Password">
+                        <input type="date" data-date-inline-picker="true" />
+                        <button type="button" class="custom-btn btn-6">Create account</button>
+                        <button type="button" class="custom-btn btn-6">Contact support </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
     <ul class="babo">
         <li>
